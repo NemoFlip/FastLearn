@@ -12,7 +12,7 @@ struct HeartView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Image("girl").cornerRadius(12)
+                Image("snoopy").cornerRadius(12)
             }.padding().toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
