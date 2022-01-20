@@ -12,7 +12,7 @@ struct DefinitionView: View {
             case myField
     }
     @StateObject private var definitionsVM = AllDefinitionsViewModel()
-    @State private var color: Color = Color.black.opacity(0.3)
+    @State private var color: Color = Color(.label).opacity(0.3)
     @FocusState private var focusField: Field?
     var body: some View {
         VStack {
@@ -58,7 +58,7 @@ extension DefinitionView {
             .focused($focusField, equals: .myField)
             .onSubmit {
                 withAnimation(.easeInOut(duration: 0.2)) {
-                    color = Color.black.opacity(0.3)
+                    color = Color(.label).opacity(0.3)
                 }
             }
             .onTapGesture {
@@ -76,7 +76,7 @@ extension DefinitionView {
             ZStack {
                 Capsule().fill(.white).frame(height: 50).shadow(color: .black.opacity(0.5), radius: 2)
                 HStack(spacing: 15) {
-                    Title(title: "Find Definition").font(.title)
+                    Title(title: "Find Definition").foregroundColor(.black.opacity(0.7)).font(.title)
                     Image("defSnoop")
                         .resizable()
                         .scaledToFit()

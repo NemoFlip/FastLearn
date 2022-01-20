@@ -60,10 +60,10 @@ extension StartNewGameView {
                 ZStack {
                     VStack(spacing: 25) {
                         Text(key)
-                            .font(.system(size: 33, weight: .semibold, design: .rounded)).foregroundColor(Color.black)
+                            .font(.system(size: 33, weight: .semibold, design: .rounded)).foregroundColor(Color(.label))
                         HorizontalSplitter()
                         Text(value)
-                            .font(.system(size: 23, weight: .medium, design: .rounded)).foregroundColor(Color.black)
+                            .font(.system(size: 23, weight: .medium, design: .rounded)).foregroundColor(Color(.label))
                     }
                 }
             }, back: {
