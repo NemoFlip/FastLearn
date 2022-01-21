@@ -16,22 +16,13 @@ struct TatarAppApp: App {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(Color.cyan)]
         UINavigationBar.appearance().tintColor = UIColor(Color.cyan)
         UITableView.appearance().backgroundColor = UIColor.clear
+        Thread.sleep(forTimeInterval: 1)
     }
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                
                 NavigationView {
                     HomeView()
-                }.environmentObject(vm).navigationViewStyle(StackNavigationViewStyle())
-                ZStack {
-                    if showLaunchView {
-                        LaunchView(showLaunchView: $showLaunchView)
-                            .transition(.scale(scale: 0))
-                    }
-                }.zIndex(2.0)
-            }
-            
+            }.environmentObject(vm).navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

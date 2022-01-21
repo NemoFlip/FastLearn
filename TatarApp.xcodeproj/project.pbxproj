@@ -36,7 +36,6 @@
 		E1D82A5C279AEB64000EED11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D82A5B279AEB64000EED11 /* LaunchScreen.storyboard */; };
 		E1FAB038277E222C0039A36B /* ButtonGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAB037277E222C0039A36B /* ButtonGameView.swift */; };
 		E1FD5067276CEE7C0086B421 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FD5066276CEE7C0086B421 /* GameView.swift */; };
-		E1FE92F7279AEA4100C3CB53 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FE92F6279AEA4100C3CB53 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +88,6 @@
 		E1D82A5B279AEB64000EED11 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1FAB037277E222C0039A36B /* ButtonGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGameView.swift; sourceTree = "<group>"; };
 		E1FD5066276CEE7C0086B421 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		E1FE92F6279AEA4100C3CB53 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +186,6 @@
 				E1025F3D2782ED3B005D26E8 /* RepeatingWordsView.swift */,
 				E1A91077278C6465000DED6C /* HeartView.swift */,
 				E1205959278ADC9400AC6E88 /* DefinitionView.swift */,
-				E1FE92F6279AEA4100C3CB53 /* LaunchView.swift */,
 				E19F115B278822680062304C /* AppInfoView.swift */,
 			);
 			path = Views;
@@ -395,7 +392,6 @@
 				E10C398B2781F5E200851495 /* CardView.swift in Sources */,
 				E104599827678AB300D1BAFC /* GameViewModel.swift in Sources */,
 				E13CD80827904CA900AD5208 /* AllDefinitionsDataService.swift in Sources */,
-				E1FE92F7279AEA4100C3CB53 /* LaunchView.swift in Sources */,
 				E1FD5067276CEE7C0086B421 /* GameView.swift in Sources */,
 				E158E4BA277C6F7C0042D6E7 /* StartNewGameView.swift in Sources */,
 				E101C850277DAA0C0008DC7A /* AnswersContainer.xcdatamodeld in Sources */,

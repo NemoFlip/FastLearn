@@ -3,7 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,12 +33,26 @@
                                             <constraint firstAttribute="height" constant="200" id="RRc-v5-InV"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FastLearn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-RE-YAh">
+                                        <rect key="frame" x="147.5" y="727.5" width="107" height="30"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pOu-RE-YAh" secondAttribute="height" multiplier="107:30" id="eOM-xp-aAE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" name="LaunchAccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" systemColor="linkColor"/>
+                                        <size key="shadowOffset" width="1" height="0.0"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="I7p-oz-MI3" firstAttribute="centerX" secondItem="FQh-Gq-yCi" secondAttribute="centerX" id="20O-sY-riK"/>
                                     <constraint firstItem="I7p-oz-MI3" firstAttribute="centerY" secondItem="FQh-Gq-yCi" secondAttribute="centerY" id="Gns-7q-ydH"/>
+                                    <constraint firstItem="pOu-RE-YAh" firstAttribute="centerY" secondItem="FQh-Gq-yCi" secondAttribute="centerY" constant="333.5" id="QM9-hI-aFk"/>
                                     <constraint firstItem="I7p-oz-MI3" firstAttribute="centerX" secondItem="FQh-Gq-yCi" secondAttribute="centerX" id="ZRd-Tb-gie"/>
+                                    <constraint firstItem="pOu-RE-YAh" firstAttribute="centerX" secondItem="FQh-Gq-yCi" secondAttribute="centerX" constant="-6" id="bap-4c-0ZW"/>
                                     <constraint firstItem="I7p-oz-MI3" firstAttribute="centerY" secondItem="FQh-Gq-yCi" secondAttribute="centerY" id="ohF-ir-DdD"/>
                                 </constraints>
                             </view>
@@ -56,10 +72,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
         <image name="engAv" width="512" height="512"/>
+        <namedColor name="LaunchAccentColor">
+            <color red="0.46200001239776611" green="0.83799999952316284" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
