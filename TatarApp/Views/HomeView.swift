@@ -106,7 +106,7 @@ extension HomeView{
                
                 Text("Progress:").font(.title3).foregroundColor(Color(.label)).fontWeight(.medium).padding(.top, 15).padding(.bottom, 20)
                 Rectangle().fill(Color.gray.opacity(0.3)).frame(height: 3).overlay(alignment: .leading) {
-                    Color.blue.opacity(0.5).frame(width: vm.getScreenWidthForHome(), height: 3) }.padding(.bottom)
+                    Color.blue.opacity(0.5).frame(width: vm.getScreenWidthForHome(), height: 3) }.clipped().padding(.bottom)
                 HStack(spacing: 1) {
                     
                     Text("Time left: ").font(.title2).fontWeight(.semibold).foregroundColor(Color(.label).opacity(0.7))

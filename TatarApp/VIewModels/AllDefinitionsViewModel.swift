@@ -17,8 +17,10 @@ class AllDefinitionsViewModel: ObservableObject {
         if !wordToFind.isEmpty {
             definitionsDataService.getDefinitonOfWord(word: wordToFind.trimmingCharacters(in: .whitespaces).replacingOccurrences(of: ".", with: ""))
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            
         
-        definitionsDataService.$definitionsOfWord.sink {[weak self] allDefinitionsReturned in
+            self.definitionsDataService.$definitionsOfWord.sink {[weak self] allDefinitionsReturned in
             guard let wordDef = allDefinitionsReturned.first else {
                 return
             }
@@ -31,7 +33,8 @@ class AllDefinitionsViewModel: ObservableObject {
                 
             }
             
-        }.store(in: &cancellables)
+            }.store(in: &self.cancellables)
+        }
     }
     func newWordSelected() {
         definitionsDataService = AllDefinitionsDataService()
