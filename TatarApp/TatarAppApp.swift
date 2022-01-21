@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct TatarAppApp: App {
     @StateObject private var vm = GameViewModel()
+    @State private var showLaunchView = true
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.cyan)]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(Color.cyan)]
@@ -18,9 +19,19 @@ struct TatarAppApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                HomeView()
-            }.environmentObject(vm).navigationViewStyle(StackNavigationViewStyle())
+            ZStack {
+                
+                NavigationView {
+                    HomeView()
+                }.environmentObject(vm).navigationViewStyle(StackNavigationViewStyle())
+                ZStack {
+                    if showLaunchView {
+                        LaunchView(showLaunchView: $showLaunchView)
+                            .transition(.scale(scale: 0))
+                    }
+                }.zIndex(2.0)
+            }
+            
         }
     }
 }
