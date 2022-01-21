@@ -13,7 +13,7 @@ struct HeartView: View {
         NavigationView {
             VStack {
                 Text("This part of app will be completed in a short time! Please, donate for a coffee to make this process faster 🤓").font(.largeTitle).fontWeight(.medium).foregroundColor(.secondary).padding().multilineTextAlignment(.center)
-                Image("girl").resizable()
+                
                 Spacer()
             }.toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
