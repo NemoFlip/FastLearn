@@ -18,8 +18,6 @@ class AllDefinitionsViewModel: ObservableObject {
             definitionsDataService.getDefinitonOfWord(word: wordToFind.trimmingCharacters(in: .whitespaces).replacingOccurrences(of: ".", with: ""))
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            
-        
             self.definitionsDataService.$definitionsOfWord.sink {[weak self] allDefinitionsReturned in
             guard let wordDef = allDefinitionsReturned.first else {
                 return

@@ -22,17 +22,16 @@ class DisctionaryDataService {
                 myStrings.removeLast()
                 word = myStrings.randomElement() ?? ""
             } catch {
-                // contents could not be loaded
+                print("Can't find path for words")
             }
         } else {
-            // example.txt not found
+            print("There isn't a path for words")
         }
         print(word)
         guard let url = URL(string: "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20211213T140644Z.acf225c8bfc2154a.f78c3540729c86433817dcae137f1a57749fc04c&lang=en-ru&text=\(word)") else {
             return
         }
         subscription = NetworkingManager.getData(url: url).decode(type: TatarTranslationModel.self, decoder: JSONDecoder()).receive(on: DispatchQueue.main).sink(receiveCompletion: NetworkingManager.handleCompltetion, receiveValue: {[weak self] returnedModel in
-            
             self?.translation = returnedModel
             print(url.absoluteURL)
             self?.subscription?.cancel()
